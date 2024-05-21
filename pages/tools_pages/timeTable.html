@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="Keywords" content="关键词,关键词">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../../css/panel.css">
+
+</head>
+
+<body>
+
+
+    <div class="tz_content">
+     
+        <!--t_left start-->
+        <div onclick="location()" class="t_left">
+            <div class="l_logo"></div>
+            <div class="l_nav">
+                <ul>
+                    <li class="active">
+                        <a onclick="location()" id="index_location" href="../panel_files/panel.html">
+                            <i class="icon_1"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a id="index_location" href="../panel_files/myPage.html">
+                            <i class="icon_1"></i>
+                            <span>个人主页</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a id="index_location" href="../panel_files/studentList.html">
+                            <i class="icon_2"></i>
+                            <span>学生列表</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="index_location" href="../panel_files/course.html">
+                            <i class="icon_3"></i>
+                            <span>课程管理</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="index_location" href="../panel_files/work.html">
+                            <i class="icon_4"></i>
+                            <span>查看作业</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="index_location" href="#">
+                            <i class="icon_5"></i>
+                            <span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="index_location" href="#">
+                            <i class="icon_6"></i>
+                            <span></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--t_header start-->
+        <div class="t_header">
+            <!--h_nav start-->
+            <div class="h_nav">
+                <ul>
+                    <li>
+                        <a href="#" class="h_sel">
+                            <i class="h_icon1"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="h_icon2"></i>
+                            <span>平台设置</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="h_icon3"></i>
+                            <span>收藏夹</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="h_icon4"></i>
+                            <span>内容管理</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="h_icon5"></i>
+                            <span>实用网站连接</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="h_icon6"></i>
+                            <span>论坛中心</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="h_icon7"></i>
+                            <span>应用中心</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tool_panel.html">
+                            <i class="h_icon8"></i>
+                            <span>工具</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--end h_nav-->
+
+            <!--h_info start-->
+            <div class="h_info">
+                <div id="userInfo" class="h_user"></div>
+                <div onclick="sign_out()" class="h_out">
+                    <a>
+                        <span>退出</span>
+                        <i></i>
+                    </a>
+                </div>
+            </div>
+
+            <script>
+                document.getElementById("userInfo").innerHTML = `当前用户: ${localStorage.getItem('userInfo')}`;
+
+                function sign_out() {
+                    if(window.confirm("确认退出？")){
+                        window.location.href="../../index.html";
+                    } else {
+                    }
+                }
+            </script>
+            <!--end h_info-->
+
+        </div>
+        <!--end t_header-->
+
+
+        <!--t_right start-->
+        <div class="t_right">
+
+            <!--r_location start-->
+            <div class="r_location">
+                <i></i>
+                <p id="location">当前位置: 课程表</p>
+            </div>
+            <!--end r_location-->
+
+            <!--r_message start-->
+            <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>课程表</title>
+        <style>
+            table{/*设置外部相关属性,不要设置内部属性*/
+                width: 1000px;
+                height: 660px;
+                border: 3px black solid;
+                margin: 100px auto;
+                /*padding: 20px;*/
+                border-collapse: collapse;/*合并边框属性 ，使边框之间没有间距*/
+                
+            }
+            td,th{/*设置内部相关属性,不要设置外部属性*/
+                border: 1px black solid;
+                padding: 0px 22px;
+                /*padding: 20px;*/
+                /*margin: 20px;*/
+            }
+            .td1{
+                background: #A9A9A9;
+                font-weight: bold;
+            }
+            th{
+                background: brown;
+                font-size:20px;
+                color: aliceblue;
+            }
+        </style>
+    </head>
+    <body>
+        <table><!--table是块状元素的-->
+            <tr><!--使用th会使12345加粗并居中-->
+                <th colspan="6">大一下学期--课程表</th><!--和并列即是合并的是将6列合为1列使用colspan-->
+                <!--<th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>-->
+            <script>
+                function show_location_202() {
+                    alert("地点：一阶教学楼202");
+                }
+                function show_location_104() {
+                    alert("地点: 二阶教学楼104");
+                }
+                function show_location_106() {
+                    alert("地点：一阶教学楼202");
+                }
+                function show_location_315() {
+                    alert("地点：一阶教学楼202");
+                }
+                function show_location_105() {
+                    alert("地点：一阶教学楼202");
+                }
+            </script>
+
+            </tr>
+            <tr>
+                <td class="td1"></td>
+                <td class="td1">周一</td>
+                <td class="td1">周二</td>
+                <td class="td1">周三</td>
+                <td class="td1">周四</td>
+                <td class="td1">周五</td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="td1">上午</td><!--合并行使用rowspan，这是合并两行-->
+                <td onclick="show_location_104()">高等数学</td>
+                <td>无</td>
+                <td onclick="show_location_202()">高等数学</td>
+                <td>离散数学</td>
+                <td onclick="show_location_202()">高等数学</td>
+            </tr>
+            <tr>
+                <td onclick="show_location_315()">离散数学</td>
+                <td onclick="show_location_105()">Java程序设计</td>
+                <td>形势与意识</td>
+                <td onclick="show_location_105()">Java程序设计</td>
+                <td onclick="show_location_202()">大学物理</td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="td1">下午</td><!--合并行使用rowspan-->
+                <td>大学英语</td>
+                <td onclick="show_location_202">大学物理</td>
+                <td>无</td>
+                <td>体育</td>
+                <td>大学英语</td>
+            </tr>
+            <tr>
+                <!-- <td>无</td>
+                <td>无</td>
+                <td>无</td>
+                <td>无</td>
+                <td>无</td> -->
+            </tr>
+        </table>
+    </body>
+</html>
+<script>
+    var del = document.getElementsByClassName('a_del')
+    for (let i = 0; i < del.length; i++) {
+        del[i].onclick = function () {
+            del[i].parentNode.parentNode.parentNode.remove()
+        }
+    }
+</script>

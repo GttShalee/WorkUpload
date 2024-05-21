@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<script>
+
+  
+</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<!-- 设置php脚本连接数据库 -->
+<!-- <form action="login.php"></form> -->
+    
+  <div class="container right-panel-active">
+    <!--  注册id -->
+    <div class="container__form container--signup">
+      <form action="#" class="form" id="form1">
+        <h2 class="form__title">修改密码</h2>
+        <input id="realname" type="text" placeholder="真实姓名" class="input" />
+        <!-- <input id="email" type="email" placeholder="邮箱地址" class="input" /> -->
+        <input id="pwd0" type="password" placeholder="原密码" class="input" />
+        <input id="pwd" type="password" placeholder="新密码" class="input" />
+        <input id="pwd1" type="password" placeholder="确认密码" class="input" />
+        <button id="submit" onclick="edit()" class="btn">确认修改</button>
+      </form>
+    </div>
+
+    <!-- 验证注册账户 -->
+    <script>
+      //存储班级成员信息（默认密码为123456）
+      var defaultPasswd = "123456"
+      var accountAll = [{realname: "shalee", password: 20050704},{ realname: "邵立", password: defaultPasswd, email: null }, { realname: "杜宇晨", password: defaultPasswd, email: null }, { realname: "赵相通", password: defaultPasswd, email: null }, { realname: "莫文丽", password: defaultPasswd, email: null }, { realname: "高焕焕", password: defaultPasswd }, { realname: "李柏臻", password: defaultPasswd }, { realname: "杜悦", password: defaultPasswd, email: null }, { realname: "牛晶研", password: defaultPasswd, email: null }, { realname: "汤艳", password: defaultPasswd, email: null }, { realname: "王一凡", password: defaultPasswd, email: null }, { realname: "张坤弘", password: defaultPasswd, email: null }, { realname: "彭佳丽", password: defaultPasswd, email: null }, { realname: "吕柄昆", password: defaultPasswd, email: null }, { realname: "于龙啸", password: defaultPasswd, email: null }, { realname: "李政彤", password: defaultPasswd, email: null }, { realname: "范宗龙", password: defaultPasswd, email: null }, { realname: "朱世隽", password: defaultPasswd, email: null }, { realname: "张弘烨", password: defaultPasswd, email: null }, { realname: "牟俊杰", password: defaultPasswd, email: null }, { realname: "郭乡土", password: defaultPasswd, email: null }, { realname: "陈昱硕", password: defaultPasswd, email: null }, { realname: "刘翔", password: defaultPasswd, email: null }, { realname: "孟浩", password: defaultPasswd, email: null }, { realname: "陈昱铭", password: defaultPasswd, email: null }, { realname: "朱松江", password: defaultPasswd, email: null }, { realname: "殷优远", password: defaultPasswd, email: null }, { realname: "刘万达", password: defaultPasswd, email: null }, { realname: "张余洋", password: defaultPasswd, email: null }, { realname: "丛昊钰", password: defaultPasswd, email: null }, { realname: "齐建浩", password: defaultPasswd, email: null }, { realname: "董帅", password: defaultPasswd, email: null }, { realname: "孙志鹏", password: defaultPasswd, email: null }, { realname: "周志祺", password: defaultPasswd, email: null }, { realname: "李法升", password: defaultPasswd, email: null }, { realname: "钱安宇", password: defaultPasswd, email: null }, { realname: "周安琪", password: defaultPasswd, email: null }, { realname: "蒋新冉", password: defaultPasswd, email: null }, { realname: "王宇恒", password: defaultPasswd, email: null }, { realname: "牛文浩", password: defaultPasswd, email: null }, { realname: "刘树通", password: defaultPasswd, email: null } ]
+                        
+      function edit() {
+
+        user_realname = document.getElementById('realname').value;
+        prePwd = document.getElementById('pwd0').value;
+        newPwd = document.getElementById('pwd').value;
+        confirmPwd = document.getElementById('pwd1').value;
+
+        if (document.getElementById('pwd0').value == "" || document.getElementById('realname'.value == "")){
+          alert("姓名和原密码不能为空");
+        } 
+        // var reg=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+        else if(document.getElementById('pwd').value == "")
+        {
+          alert("新密码不能为空");
+        } else if(newPwd !== confirmPwd){
+          alert("两次输入密码不一致！")
+        } else if (accountAll.find(account => account.realname === user_realname && account.password === prePwd) && confirmPwd === newPwd) {
+          
+          for(let i=0; i<accountAll.length; i++) {
+            if (accountAll[i].realname === user_realname) {
+              accountAll[i].password === newPwd;
+            }
+          }
+        
+          // 将用户信息存储在数据库中 貌似没这么简单  太可恶了搞了一个晚上最后只能用最低级的数组处理 hhh
+          // ------
+        
+          // 等以后学了php再写后端吧……
+
+          // localStorage.setItem("name", $("#realname").val());
+          // localStorage.setItem("password", $("#password").val());
+          // localStorage.setItem("email", $("#email").val());
+          
+          alert("修改成功")
+         window.location.reload();
+        } else {
+          alert("修改失败")
+        }
+      }
+    </script>
+
+
+    <!-- 登陆 -->
+    <div class="container__form container--signin">
+      <form action="panel.html" class="form" id="form2">
+        <h2 class="form__title">登陆你的账号</h2>
+        <input id="email1" type="text" placeholder="姓名" class="input" />
+        <input id="pwd11" type="password2" placeholder="密码" class="input" />
+        <!-- 忘记密码跳转链接 -->
+        <span class="order">
+        <a href="index.html" class="link">修改密码</a>   
+        </span>
+        <button onclick="checkuser()" class="btn">登陆</button>
+      </form>
+    </div>
+
+
+    <!-- let targetRealname = "邵立"; // 要查找的用户名
+let targetPassword = "yourPassword"; // 要查找的密码
+
+let foundAccount = accountAll.find(account => account.realname === targetRealname && account.password === targetPassword);
+
+if (foundAccount) {
+    console.log("变量存在在数组中，并且密码匹配");
+} else {
+    console.log("变量不存在在数组中或者密码不匹配");
+} -->
+
+    <!-- 验证账户密码 -->
+    <script>
+
+//存储班级成员信息（默认密码为123456）
+      function checkuser() {
+
+        // ----拉取数据库中的信息进行比对
+        str1 = document.getElementById('email1').value;
+        str2 = document.getElementById('pwd11').value;
+        // alert(str1);
+        // alert(str2);
+        if (accountAll.find(account => account.realname === str1 && account.password === str2)) {
+          // --登陆成功跳转到panel页面
+
+          localStorage.setItem('userInfo', str1);
+          window.location.href="pages/panel_files/panel.html";
+        } else if(document.getElementById('email1').value == ""){
+          alert("用户")
+        } else {
+          alert("账号或密码错误");
+        }
+      }
+    </script>
+
+    <!-- 页面翻转 -->
+    <div class="container__overlay">
+      <div class="overlay">
+        <div class="overlay__panel overlay--left">
+          <button class="btn" id="signIn">登陆系统</button>
+        </div>
+        <div class="overlay__panel overlay--right">
+          <button class="btn" id="signUp">修改密码</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+  </script>
+
+  <script>
+    const signInBtn = document.getElementById("signIn");
+    const signUpBtn = document.getElementById("signUp");
+    const fistForm = document.getElementById("form1");
+    const secondForm = document.getElementById("form2");
+    const container = document.querySelector(".container");
+
+    signInBtn.addEventListener("click", () => {
+      container.classList.remove("right-panel-active");
+    });
+
+    signUpBtn.addEventListener("click", () => {
+      container.classList.add("right-panel-active");
+    });
+
+    fistForm.addEventListener("submit", (e) => e.preventDefault());
+    secondForm.addEventListener("submit", (e) => e.preventDefault());
+
+  </script>
+</body>
+
+</html>
