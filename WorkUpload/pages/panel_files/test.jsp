@@ -1,0 +1,111 @@
+
+<!doctype html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="Keywords" content="关键词,关键词">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../../css/panel.css">
+</head>
+<body>
+    <div class="tz_content">
+
+         <!--t_left start-->
+         <div class="t_left">
+            <div class="l_logo"></div>
+            <div class="l_nav">
+                <ul>
+                    <li class="active">
+                        <a href="#">
+                            <i class="icon_6"></i>
+                            <span>Admin Panel</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--t_header start-->
+        <div class="t_header">
+            <!--h_nav start-->
+            <div class="h_nav">
+                <ul>
+                    <li>
+                        <a href="#" class="h_sel">
+                            <i class="h_icon1"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--end h_nav-->
+
+            <!--h_info start-->
+            <div class="h_info">
+                <div id="userInfo" class="h_user"></div>
+                <div onclick="sign_out()" class="h_out">
+                    <a>
+                        <span>退出</span>
+                        <i></i>
+                    </a>
+                </div>
+            </div>
+
+            <script>
+                document.getElementById("userInfo").innerHTML = `当前用户: ${localStorage.getItem('userInfo')}`;
+                function sign_out() {
+                    if(window.confirm("确认退出？")){
+                        window.location.href="../../index.html";
+                    } else {
+                    }
+                }
+            </script>
+            <!--end h_info-->
+
+        </div>
+        <!--end t_header-->
+
+
+        <!--t_right start-->
+        <div class="t_right">
+
+            <!--r_location start-->
+            <div class="r_location">
+                <i></i>
+                <p>当前位置: 课程管理</p>
+            </div>
+            <!--end r_location-->
+
+
+<!-- 管理员上传作业 -->
+
+<div>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+
+        <input type="file" name="work">
+        <input type="submit">
+    </form>
+</div>
+
+
+<!-- 管理员上传作业 -->
+
+
+        </div>
+        <!--end t_right-->
+
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    var del = document.getElementsByClassName('a_del')
+    for (let i = 0; i < del.length; i++) {
+        del[i].onclick = function () {
+            del[i].parentNode.parentNode.parentNode.remove()
+        }
+    }
+</script>

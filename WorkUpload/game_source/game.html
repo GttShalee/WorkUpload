@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <!-- ste the style for the most of button and paras---- -->
+<style>
+    button {
+        display: block;
+        margin: 0 auto;
+        height: 100px;
+        width: 100px;
+    }
+    p {
+        color: aqua;
+    }
+</style>
+
+    <!-- -- the background_pic is one that i photoed during my high school time-- a very queit night when the summer--     -->
+    <!-- I like the light and the dark street 
+    i also memory the people and the precious agae -->
+
+<body background="https://cdn.jsdelivr.net/gh/GttShalee/Blog-pic/cover.jpg" style="background-size: 100%; background-repeat: no-repeat; background-attachment: fixed;" >
+    <center> <div>
+        <button id="info_l" style="display: inline-block;;">信息</button>
+        <button onclick="window.location.href='https://shalee.cn/daliy/game.html'" id="index_r" style="display: inline-block;">重新开始</button>
+    </div>
+</center>
+    <!-- the main button the player can click -->
+    <button onclick="increase()">点击我增大</button>
+    <button id="demo" style="display: block; margin:  0 auto; height: 100px; width: 300px;"></button>
+    
+    <center><p>神秘道具：颜色越深越不要尝试点击！！！</p></center>
+    
+<center>
+    <div>
+        <button onclick="tool_01()" id="tool_01" style="display: inline-block; color: aqua; background-color: antiquewhite;">神秘道具1</button>
+        <button onclick="tool_02()" id="tool_02" style="display: inline-block; color: rgb(0, 255, 170); background-color: beige;">神秘道具2</button>
+        <button onclick="tool_03()" id="tool_03" style="display: inline-block; color: rgba(86, 10, 179, 0.881); background-color: lightsalmon;">神秘道具3</button>
+        <button onclick="window.location.href='https://nodtotherhythm.com/?oUZDAnV7'" id="tool_04" style="display: inline-block; color: red; background-color: lightslategrey;">神秘道具4</button>
+        <button onclick="window.location.href='https://nodtotherhythm.com/?r5cgZH6N'" id="tool_03" style="display: inline-block; color: rgb(255, 0, 0); background-color: lightsalmon;">神秘道具3</button>
+    </div>
+</center>
+    
+    
+    
+    <script>
+        
+        // some secret number which can alter the secret info
+        const goal_01 = 10;
+        const goal_02 = 100;
+        const goal_03 = 500;
+        const goal_04 = 2000;
+        const goal_05 = 15000;
+        const goal_06 = 114514;
+        const goal_07 = 500000;
+        const goal_08 = 6666666;
+        const goal_09 = 88888888;
+        const goal_010 = 100000000;
+        
+        // inti the count of each button
+        var tool_01_count = 0;
+        var tool_02_count = 0;
+        var tool_03_count = 0;
+        var tool_04_count = 0;
+    
+        // some index_number to set
+        var initNum = 1;
+        var index = 1;
+        var all_count = 0;
+
+        function increase() {
+            if(initNum == 520) {
+            alert("Love我爱你冠淞Love");
+        }
+            if(initNum == 1314) {
+            alert("Love我爱你冠淞Love");
+        }
+
+        if(initNum > 520 && initNum < 530) {
+            alert("呜呜呜   你错过了爱我的520  呜呜呜");
+        }
+        
+        if (initNum >= 134) {
+            index *= 2;
+        }
+            document.getElementById('demo').innerHTML = initNum;  
+            initNum += index; 
+        }
+        
+        function tool_01() {
+            if (initNum <= pow_2(tool_01_count)) {
+                alert("分数不够小老弟，请疯狂点击按钮")
+            } else {
+                initNum -= pow_2(tool_01_count);
+                index ++;
+                document.getElementById('demo').innerHTML = initNum;  
+                tool_01_count ++;
+            }
+            
+            document.getElementById('tool_01').innerHTML = `
+            花费${pow_2(tool_01_count)-1} 每次点击分数+1   
+            点击次数： ${tool_01_count}`
+
+            // display some infos on the begin
+       document.getElementById('info_l').innerHTML = `每次点击+${index}`;
+       document.getElementById('info_r').innerHTML = `点击总次数：${all_count}`;
+            
+        }
+
+        function tool_02() {
+            if (initNum <= pow_3(tool_02_count)) {
+                alert("分数不够小老弟，请疯狂点击按钮")
+            } else {
+                initNum -= pow_3(tool_02_count);
+                index += 3;
+                document.getElementById('demo').innerHTML = initNum;  
+                tool_02_count ++;
+
+            }
+
+            document.getElementById('tool_02').innerHTML = `
+            花费${pow_3(tool_02_count)} 每次点击分数+3   
+            点击次数： ${tool_02_count}`
+
+            document.getElementById('info_l').innerHTML = `每次点击+${index}`;
+        }
+
+        function tool_03() {
+            if (initNum <= pow_5(tool_03_count)) {
+                alert("分数不够小老弟，请疯狂点击按钮")
+            } else {
+                initNum -= pow_5(tool_03_count);
+                index += 5;
+                document.getElementById('demo').innerHTML = initNum;  
+                tool_03_count ++;
+
+            }
+
+            document.getElementById('tool_03').innerHTML = `
+            花费${pow_5(tool_03_count)} 每次点击分数+5   
+            点击次数： ${tool_03_count}`
+
+            document.getElementById('info_l').innerHTML = `每次点击+${index}`;
+        }
+
+        // pow functions ---------- I don't know the math.h file so i just write it myself---
+        function pow_2(number) {
+            let pow_2_return = 1;
+            for(let i = 0; i < number; i++){
+                pow_2_return = 2 * pow_2_return;
+            }
+            return pow_2_return;
+        }
+
+        function pow_3(number) {
+            let pow_3_return = 1;
+            for(let i = 0; i < number; i++){
+                pow_3_return = 3 * pow_3_return;
+            }
+            return pow_3_return;
+        }
+
+        function pow_5(number) {
+            let pow_5_return = 1;
+            for(let i = 0; i < number; i++){
+                pow_5_return = 5 * pow_5_return;
+            }
+            return pow_5_return;
+        }
+
+        
+    </script>
+</body>
+</html>

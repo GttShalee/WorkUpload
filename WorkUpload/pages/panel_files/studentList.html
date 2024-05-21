@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="Keywords" content="关键词,关键词">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../../css/panel.css">
+
+</head>
+
+<body>
+
+
+    <div class="tz_content">
+
+        <!--t_left start-->
+        <div class="t_left">
+            <div class="l_logo"></div>
+            <div class="l_nav">
+                <ul>
+                    <li>
+                        <a href="panel.html">
+                            <i class="icon_1"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="myPage.html">
+                            <i class="icon_1"></i>
+                            <span>个人主页</span>
+                        </a>
+                    </li>
+
+                    <li class="active">
+                        <a href="studentList.html">
+                            <i class="icon_2"></i>
+                            <span>学生列表</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="course.html">
+                            <i class="icon_3"></i>
+                            <span>课程管理</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="work.html">
+                            <i class="icon_4"></i>
+                            <span>查看作业</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="class.html">
+                            <i class="icon_5"></i>
+                            <span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="work.html">
+                            <i class="icon_6"></i>
+                            <span></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--t_header start-->
+        <div class="t_header">
+            <!--h_nav start-->
+            <div class="h_nav">
+                <ul>
+                    <li>
+                        <a href="#" class="h_sel">
+                            <i class="h_icon1"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="h_icon2"></i>
+                            <span>平台设置</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="h_icon3"></i>
+                            <span>收藏夹</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="h_icon4"></i>
+                            <span>内容管理</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="h_icon5"></i>
+                            <span>实用网站连接</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="h_icon6"></i>
+                            <span>论坛中心</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="h_icon7"></i>
+                            <span>应用中心</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="h_icon8"></i>
+                            <span>工具</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--end h_nav-->
+
+            <!--h_info start-->
+            <div class="h_info">
+                <div id="userInfo" class="h_user"></div>
+                <div onclick="sign_out()" class="h_out">
+                    <a>
+                        <span>退出</span>
+                        <i></i>
+                    </a>
+                </div>
+            </div>
+
+            <script>
+                document.getElementById("userInfo").innerHTML = `当前用户: ${localStorage.getItem('userInfo')}`;
+                function sign_out() {
+                    if(window.confirm("确认退出？")){
+                        window.location.href="../../index.html";
+                    } else {
+                    }
+                }
+            </script>
+            <!--end h_info-->
+
+        </div>
+        <!--end t_header-->
+
+
+        <!--t_right start-->
+        <div class="t_right">
+
+            <!--r_location start-->
+            <div class="r_location">
+                <i></i>
+                <p>当前位置: 学生列表</p>
+            </div>
+            <!--end r_location-->
+
+            <!--r_message start-->
+            <div class="r_message">
+                <div class="m_list m_1">
+                    <div class="m_pic"></div>
+                    <div class="m_desc">
+                        <span>2450</span>
+                        <p>所有用户数</p>
+                    </div>
+                </div>
+                <div class="m_list m_2">
+                    <div class="m_pic"></div>
+                    <div class="m_desc">
+                        <span>2450</span>
+                        <p>所有用户数</p>
+                    </div>
+                </div>
+                <div class="m_list m_3">
+                    <div class="m_pic"></div>
+                    <div class="m_desc">
+                        <span>2450</span>
+                        <p>所有用户数</p>
+                    </div>
+                </div>
+                <div class="m_list m_4">
+                    <div class="m_pic"></div>
+                    <div class="m_desc">
+                        <span>2450</span>
+                        <p>所有用户数</p>
+                    </div>
+                </div>
+                <div class="m_list m_5">
+                    <div class="m_pic"></div>
+                    <div class="m_desc">
+                        <span>2450</span>
+                        <p>所有用户数</p>
+                    </div>
+                </div>
+                <div class="m_list m_6">
+                    <div class="m_pic"></div>
+                    <div class="m_desc">
+                        <span>2450</span>
+                        <p>所有用户数</p>
+                    </div>
+                </div>
+                <div class="m_list m_7">
+                    <div class="m_pic"></div>
+                    <div class="m_desc">
+                        <span>2450</span>
+                        <p>所有用户数</p>
+                    </div>
+                </div>
+                <div class="m_list m_8">
+                    <div class="m_pic"></div>
+                    <div class="m_desc">
+                        <span>2450</span>
+                        <p>所有用户数</p>
+                    </div>
+                </div>
+                <div class="m_list m_9">
+                    <div class="m_pic"></div>
+                    <div class="m_desc">
+                        <span>2450</span>
+                        <p>所有用户数</p>
+                    </div>
+                </div>
+                <div class="m_list m_10">
+                    <div class="m_pic"></div>
+                    <div class="m_desc">
+                        <span>2450</span>
+                        <p>所有用户数</p>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!--end r_message-->
+
+        </div>
+        <!--end t_right-->
+
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    var del = document.getElementsByClassName('a_del')
+    for (let i = 0; i < del.length; i++) {
+        del[i].onclick = function () {
+            del[i].parentNode.parentNode.parentNode.remove()
+        }
+    }
+</script>
