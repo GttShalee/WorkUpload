@@ -1,0 +1,768 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>实用工具</title>
+  <meta name='robots' content='max-image-preview:large' />
+  <link rel='stylesheet' id='wp-block-library-css' href='https://c.runoob.com/wp-includes/css/dist/block-library/style.min.css?ver=6.2.2'
+        type='text/css' media='all' />
+  <link rel='stylesheet' id='wpProQuiz_front_style-css' href='https://c.runoob.com/wp-content/plugins/Wp-Pro-Quiz/css/wpProQuiz_front.min.css?ver=0.37'
+        type='text/css' media='all' />
+  <meta name="keywords" content="海拥工具,网址导航,在线工具">
+  <meta name="description" content="海拥工具，为开发设计人员提供在线工具，网址导航，提供在线PHP、Python、 CSS、JS 调试，中文简繁体转换，进制转换等工具。致力于打造国内专业WEB开发工具，集成开发环境，WEB开发教程。..">
+  <link rel="shortcut icon" href="https://static.jyshare.com/images/c-runoob-logo.ico">
+
+
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="https://c.runoob.com/wp-content/themes/toolrunoob2/bootstrap.min.css">
+
+  <!-- Custom Fonts -->
+  <link href="https://cdn.staticfile.org/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" type="text/css">
+  <!--[if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <!-- PHP 代码 -->
+  <link rel="stylesheet" href="https://c.runoob.com/wp-content/themes/toolrunoob2/style.css?version=1.309">
+
+  <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var searchInput = document.getElementById('searchInput');
+
+      searchInput.addEventListener('keydown', function(event) {
+        if (event.keyCode === 13) {
+          event.preventDefault(); // 阻止默认的表单提交行为
+          submitSearch();
+        }
+      });
+    });
+
+    function submitSearch() {
+      var searchInputValue = document.getElementById('searchInput').value;
+      // 在这里执行搜索操作，可以是跳转到搜索结果页面或者其他逻辑
+      console.log("搜索：" + searchInputValue);
+    }
+
+  </script>
+  <style>
+
+    /*******************************/
+    /********* Footer CSS ********/
+    /*******************************/
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+    }
+
+    a {
+      transition: .3s;
+    }
+
+    a:hover,
+    a:active,
+    a:focus {
+      outline: none;
+      text-decoration: none;
+    }
+
+    .footer {
+      position: relative;
+      padding-top: 45px;
+      background: #121518;
+    }
+
+    .footer .footer-about,
+    .footer .footer-contact,
+    .footer .footer-links,
+    .footer .footer-project {
+      position: relative;
+      margin-bottom: 45px;
+      color: #999999;
+    }
+
+    .footer .footer-about h3,
+    .footer .footer-contact h3,
+    .footer .footer-links h3,
+    .footer .footer-project h3 {
+      position: relative;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #eeeeee;
+    }
+
+    .footer .footer-about h3::after,
+    .footer .footer-contact h3::after,
+    .footer .footer-links h3::after,
+    .footer .footer-project h3::after {
+      position: absolute;
+      content: "";
+      width: 50px;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background: #eeeeee;
+    }
+
+    .footer .footer-social {
+      position: relative;
+      margin-top: 20px;
+    }
+
+    .footer .footer-social a {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      padding: 6px 0;
+      text-align: center;
+      color: #999999;
+      font-size: 14px;
+      border: 1px solid #999999;
+      border-radius: 35px;
+    }
+
+    .footer .footer-social a:hover {
+      color: #ffffff;
+      background: #0085ff;
+      border-color: #0085ff;
+    }
+
+    .footer .footer-contact p {
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #999999;
+    }
+
+    .footer .footer-contact i {
+      margin-right: 10px;
+      font-size: 16px;
+      color: #999999;
+    }
+
+    .footer .footer-contact a:last-child i {
+      margin: 0;
+    }
+
+    .footer .footer-contact a:hover i {
+      color: #0085ff;
+    }
+
+    .footer .footer-links a {
+      display: block;
+      margin-bottom: 6px;
+      padding-left: 15px;
+      color: #999999;
+    }
+
+    .footer .footer-links a:last-child {
+      margin: 0;
+    }
+
+    .footer .footer-links a:hover {
+      color: #0085ff;
+    }
+
+    .footer .footer-links a::before {
+      position: absolute;
+      content: "\f105";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      left: 0;
+    }
+
+    .footer .footer-project {
+      float: left;
+      font-size: 0;
+    }
+
+    .footer .footer-project a {
+      padding: 0 8px 8px 0;
+      display: block;
+      width: 33.33%;
+      float: left;
+    }
+
+    .footer .footer-project a img {
+      width: 100%;
+    }
+
+    .footer .footer-newsletter {
+      margin-bottom: 35px;
+      max-width: 700px;
+      text-align: center;
+      color: #999999;
+    }
+
+    .footer .footer-newsletter input {
+      height: 35px;
+      border: none;
+      border-radius: 5px;
+      background: rgba(256, 256, 256, .15);
+      margin-bottom: 15px;
+    }
+
+    .footer .footer-newsletter .btn {
+      display: block;
+      width: 100%;
+      height: 35px;
+      font-size: 14px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: #e9414a;
+      border-radius: 5px;
+      border: none;
+      transition: .3s;
+    }
+
+    .footer .footer-newsletter .btn:hover {
+      color: #0085ff;
+      background: #ffffff;
+    }
+
+    .footer .footer-newsletter .btn:focus {
+      box-shadow: none;
+    }
+
+
+    .footer .copyright {
+      position: relative;
+      padding: 25px 0;
+      background: #000000;
+    }
+
+    .footer .copyright .copy-text p {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 400;
+      color: #999999;
+    }
+
+    .footer .copyright .copy-text p a {
+      color: #0085ff;
+      text-decoration: none;
+    }
+
+    .footer .copyright .copy-text p a:hover {
+      color: #ff008c;
+    }
+
+    .footer .copyright .copy-menu {
+      position: relative;
+      font-size: 0;
+      text-align: right;
+    }
+
+    .footer .copyright .copy-menu a {
+      color: #999999;
+      font-size: 16px;
+      font-weight: 400;
+      margin-right: 15px;
+      padding-right: 15px;
+      border-right: 1px solid rgba(255, 255, 255, .3);
+    }
+
+    .footer .copyright .copy-menu a:hover {
+      color: #0085ff;
+    }
+
+    .footer .copyright .copy-menu a:last-child {
+      margin-right: 0;
+      padding-right: 0;
+      border-right: none;
+    }
+
+    @media (max-width: 767.98px) {
+      .footer .copyright .copy-text,
+      .footer .copyright .copy-menu {
+        text-align: center;
+      }
+
+      .footer .copyright .copy-text p {
+        margin-bottom: 5px;
+      }
+
+    }
+  </style>
+  <!-- footer -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+  <link href="https://at.alicdn.com/t/c/font_3277826_8yxh6bi02oe.css" rel="stylesheet">
+  <script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script>
+  <script>LA.init({id:"JxVJPIpe3UAQqoDx",ck:"JxVJPIpe3UAQqoDx"})</script></head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background: #393D49;">
+  <a class="navbar-brand mr-auto mr-lg-2" href="/">海拥工具</a>
+  <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <a target="_blank" class="nav-link" href="https://game.haiyong.site/">游戏合集</a>
+      </li>
+
+      <li class="nav-item">
+        <a target="_blank" class="nav-link" href="cloud-server/index.html">站长工具</a>
+      </li>
+
+      <li class="nav-item">
+        <a target="_blank" class="nav-link" href="https://tools.haiyong.site/ai/index.html">AI 应用</a>
+      </li>
+      <li class="nav-item">
+        <a target="_blank" class="nav-link" href="more/svgeditor/index.html">SVG 在线工具</a>
+      </li>
+      <li class="nav-item">
+        <a target="_blank" class="nav-link" href="search-sites/index.html">搜索引擎</a>
+      </li>
+
+      <li class="nav-item">
+        <a target="_blank" class="nav-link" href="imglibs/index.html">图片&颜色</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-expanded="false">更多频道</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a href="web-developer/index.html" class="dropdown-item" target="_blank">前端开发</a>
+          <a href="media-om/index.html" class="dropdown-item" target="_blank">媒体运营</a>
+          <a href="tech-sites/index.html" class="dropdown-item" target="_blank">科技网站</a>
+          <a href="cloud-server/index.html" class="dropdown-item" target="_blank">云服务器</a>
+          <a href="office/index.html" class="dropdown-item" target="_blank">办公软件</a>
+          <a href="scholar/index.html" class="dropdown-item" target="_blank">学术搜索</a>
+          <a href="ai/index.html" class="dropdown-item" target="_blank">AI 应用</a>
+          <a href="quiz/index.html" class="dropdown-item" target="_blank">在线测验</a>
+          <a href="finance/index.html" class="dropdown-item" target="_blank">财经频道</a>
+          <a href="banks/index.html" class="dropdown-item" target="_blank">银行机构</a>
+          <a href="danwei/index.html" class="dropdown-item" target="_blank">单位换算</a>
+          <a href="sports/index.html" class="dropdown-item" target="_blank">体育频道</a>
+
+        </div>
+      </li>
+      <!--
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-expanded="false">语言</a>
+<div class="dropdown-menu" aria-labelledby="dropdown01">
+<a href="https://enc.runoob.com" class="dropdown-item" target="_blank">English</a>
+</div>
+</li>
+-->
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0" action="" method="get">
+      <input class="form-control mr-sm-2" name="s" value="" type="text" id="searchInput" placeholder="建议用ctrl+f" aria-label="Search">
+      <button class="btn btn-warning my-2 my-sm-0" type="submit" id="searchButton">搜索</button>
+    </form>
+
+  </div>
+</nav>
+<script>
+  var is_home = false;
+</script>
+<div class="nav-scroller bg-white shadow-sm fixed-top" style="position: fixed;top:54px;">
+  <nav class="nav nav-underline">
+    <a class="nav-link active" href="javascript:void();"><i class="fa fa-compass" aria-hidden="true"></i> 快速导航</a>
+    <a class="nav-link" href="#top-0">编译工具</a>
+    <a class="nav-link" href="#top-1">前端工具</a>
+  </nav>
+</div>
+<script>
+  is_home = true;
+</script>
+<style>
+
+</style>
+
+</script>
+<div class="nav-scroller bg-white shadow-sm fixed-top" style="position: fixed;top:54px;">
+  <nav class="nav nav-underline">
+    <a class="nav-link active" href="javascript:void();"><i class="fa fa-compass" aria-hidden="true"></i> 快速导航</a>
+    <a class="nav-link" href="#top-0">编译工具</a>
+    <a class="nav-link" href="#top-1">前端工具</a>
+  </nav>
+</div>
+<script>
+  is_home = true;
+</script>
+
+<div class="row runoob-item runoob-item-index" data-text="技术学习" id="runoob-goto-36">
+  <div class="col-md-12">
+    <div class="anchor-link"></div>
+    <strong class="runoob-item-name"><i class="fa fa-list"></i> 技术学习 </strong>
+  </div>
+  <div class="col-md-12">
+
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://stackoverflow.com/search" class="runoob-card" data-placement="bottom" data-toggle="tooltip"
+           target="_blank" rel="nofollow" title=" 大部分编程问题都能在这里找到答案。">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/14-e1647306997102.png">
+
+            Stack Overflow</div>
+          <div class="runoob-card-des"> 大部分编程问题都能在这里找到答案。</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://www.cnblogs.com/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" 开发者的网上家园">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/cnblogs-logo.png">
+
+            博客园</div>
+          <div class="runoob-card-des"> 开发者的网上家园</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://www.csdn.net/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" 专业开发者社区">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/csdn-logo.jpeg">
+
+            CSDN</div>
+          <div class="runoob-card-des"> 专业开发者社区</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://www.oschina.net/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" 中文开源技术交流社区">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/开源中国.jpg">
+
+            开源中国</div>
+          <div class="runoob-card-des"> 中文开源技术交流社区</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://segmentfault.com/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" 一个开放的技术社区">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/segmentfault.png">
+
+            SF思否</div>
+          <div class="runoob-card-des"> 一个开放的技术社区</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://juejin.cn/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" 代码不止，掘金不停">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/掘金.png">
+
+            掘金</div>
+          <div class="runoob-card-des"> 代码不止，掘金不停</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://tools.haiyong.site/web-developer/" class="runoob-card" data-placement="bottom" data-toggle="tooltip"
+           target="_blank" title=" 中国领先的IT技术网站">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/05/532707_api_coding_developer_development_man_icon.png">
+
+            前端开发</div>
+          <div class="runoob-card-des"> 中国领先的IT技术网站</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://dev.to/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" 国外技术分享社区，技术分类比较多，包含 C、 Java、Python 等">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/04/dev-logo.png">
+
+            DEV Community</div>
+          <div class="runoob-card-des"> 国外技术分享社区，技术分类比较多，包含 C、 Java、Python 等</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://www.infoq.cn/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" 以社区为中心的技术媒体平台，致力于促进软件开发及相关领域知识与创新的传播">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/infoq-logo.png">
+
+            InfoQ</div>
+          <div class="runoob-card-des"> 以社区为中心的技术媒体平台，致力于促进软件开发及相关领域知识与创新的传播</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="http://www.chinaunix.net/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" 专业的Linux/Unix应用与开发者社区，是IT人的网上家园">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/china-unix.jpg">
+
+            ChinaUnix</div>
+          <div class="runoob-card-des"> 专业的Linux/Unix应用与开发者社区，是IT人的网上家园</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://tools.haiyong.site/quiz/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           title=" 包含各种语言在线测验题">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/05/quiz-icon.png">
+
+            编程测验</div>
+          <div class="runoob-card-des"> 包含各种语言在线测验题</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://studygolang.com/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" 中国Golang社区，是Go语言爱好者的学习家园">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/golang.jpg">
+
+            Go语言中文网</div>
+          <div class="runoob-card-des"> 中国Golang社区，是Go语言爱好者的学习家园</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="http://www.v2ex.com" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" 一个汇集各类奇妙好玩的话题和流行动向的网站，V2EX提供特别有用的小工具『ZEN』,帮助你掌握自己的时间">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/v2ex-logo.png">
+
+            V2EX</div>
+          <div class="runoob-card-des"> 一个汇集各类奇妙好玩的话题和流行动向的网站，V2EX提供特别有用的小工具『ZEN』,帮助你掌握自己的时间</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://cnodejs.org/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" Node.js专业中文社区">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/cnode.png">
+
+            CNode</div>
+          <div class="runoob-card-des"> Node.js专业中文社区</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://www.linuxidc.com/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" Linux 系统门户网站，实时发布最新 Linux 资讯。">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/linuxidc-logo.png">
+
+            Linux 公社</div>
+          <div class="runoob-card-des"> Linux 系统门户网站，实时发布最新 Linux 资讯。</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://docs.microsoft.com/zh-cn/documentation/" class="runoob-card" data-placement="bottom"
+           data-toggle="tooltip" target="_blank" rel="nofollow" title=" 搜索有关 Microsoft 开发人员工具和技术的深度文章。">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/msdn-logo.png">
+
+            MSDN</div>
+          <div class="runoob-card-des"> 搜索有关 Microsoft 开发人员工具和技术的深度文章。</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://developer.ibm.com/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" IBM的官方开发者项目，在这里你可以访问和下载试用版软件，查找丰富的IT技术资源，和专业的IT从业人员交流">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/develper.png">
+
+            developerWork</div>
+          <div class="runoob-card-des"> IBM的官方开发者项目，在这里你可以访问和下载试用版软件，查找丰富的IT技术资源，和专业的IT从业人员交流</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://leetcode-cn.com/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" 刷题及面试资源，帮助你高效提升编程技能">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/leetcode-logo.png">
+
+            力扣</div>
+          <div class="runoob-card-des"> 刷题及面试资源，帮助你高效提升编程技能</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://www.reddit.com/r/programming/" class="runoob-card" data-placement="bottom" data-toggle="tooltip"
+           target="_blank" rel="nofollow" title=" 和世界各地的程序员探讨和交流技术问题或 IT 热点资讯。">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/reddit-logo.png">
+
+            Reddit</div>
+          <div class="runoob-card-des"> 和世界各地的程序员探讨和交流技术问题或 IT 热点资讯。</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://news.ycombinator.com/" class="runoob-card" data-placement="bottom" data-toggle="tooltip"
+           target="_blank" rel="nofollow" title=" 计算机黑客和创业公司的社会化新闻网站">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/hn-logo.png">
+
+            Hacker News</div>
+          <div class="runoob-card-des"> 计算机黑客和创业公司的社会化新闻网站</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://www.freebuf.com/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" 国内网络安全行业门户，适合相对资深的极客、黑客人群，以及网站安全类岗位的从业人员。">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/freebuf-logo.png">
+
+            FreeBuf</div>
+          <div class="runoob-card-des"> 国内网络安全行业门户，适合相对资深的极客、黑客人群，以及网站安全类岗位的从业人员。</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://www.w3school.com.cn/" class="runoob-card" data-placement="bottom" data-toggle="tooltip"
+           target="_blank" rel="nofollow" title=" 包含了比较全面的中文 Web 技术教程">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/w3-logo.png">
+
+            W3School</div>
+          <div class="runoob-card-des"> 包含了比较全面的中文 Web 技术教程</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://www.51cto.com/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" 中国领先的IT技术网站">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/03/51otc.jpg">
+
+            51CTO</div>
+          <div class="runoob-card-des"> 中国领先的IT技术网站</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://dzone.com/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" 技术涵盖比较全面的网站，像云平台、数据库、物联网、开发运维、Java 语言等都有。">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/04/dz-logo-v.svg">
+
+            Dzone</div>
+          <div class="runoob-card-des"> 技术涵盖比较全面的网站，像云平台、数据库、物联网、开发运维、Java 语言等都有。</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://www.icourse163.org/" class="runoob-card" data-placement="bottom" data-toggle="tooltip"
+           target="_blank" rel="nofollow" title=" 精品课程在线学习平台">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/04/mooc-logo.png">
+
+            中国大学MOOC</div>
+          <div class="runoob-card-des"> 精品课程在线学习平台</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://devdocs.io/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" 开源免费文档查询工具">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/04/devdoc-logo.png">
+
+            DevDocs</div>
+          <div class="runoob-card-des"> 开源免费文档查询工具</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://developer.mozilla.org/zh-CN/" class="runoob-card" data-placement="bottom" data-toggle="tooltip"
+           target="_blank" rel="nofollow" title=" Web 技术，包括 CSS、HTML 和 JavaScript">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2022/05/mdn-logo.png">
+
+            MDN Web Docs</div>
+          <div class="runoob-card-des"> Web 技术，包括 CSS、HTML 和 JavaScript</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://chat.openai.com/" class="runoob-card" data-placement="bottom" data-toggle="tooltip" target="_blank"
+           rel="nofollow" title=" 一款功能丰富、智能化、易用性强的人工智能工具，适用于各种内容创作者">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2023/02/openai-avatar.png">
+
+            ChatGPT</div>
+          <div class="runoob-card-des"> 一款功能丰富、智能化、易用性强的人工智能工具，适用于各种内容创作者</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://the-algorithms.com/" class="runoob-card" data-placement="bottom" data-toggle="tooltip"
+           target="_blank" rel="nofollow" title=" GitHub 最大的开源算法库">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2023/03/logo_t.svg">
+
+            Algorithms</div>
+          <div class="runoob-card-des"> GitHub 最大的开源算法库</div>
+        </a>
+      </div>
+
+
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 runoob-padding">
+        <a href="https://c.runoob.com/books/" class="runoob-card" data-placement="bottom" data-toggle="tooltip"
+           target="_blank" title=" 各类编程书籍推荐">
+          <div class="runoob-card-tit">
+            <img width="128" height="128" src="https://tools.haiyong.site/wp-content/uploads/2023/03/285636_book_icon.png">
+
+            编程书籍</div>
+          <div class="runoob-card-des"> 各类编程书籍推荐</div>
+        </a>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
