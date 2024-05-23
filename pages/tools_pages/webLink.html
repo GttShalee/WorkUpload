@@ -1,4 +1,167 @@
+<!doctype html>
 <html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="Keywords" content="关键词,关键词">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="../../css/panel.css">
+
+</head>
+
+<body>
+
+
+<div class="tz_content">
+
+  <!--t_left start-->
+  <div onclick="location()" class="t_left">
+    <div class="l_logo"></div>
+    <div class="l_nav">
+      <ul>
+        <li class="active">
+          <a onclick="location()" id="index_location" href="../panel_files/panel.html">
+            <i class="icon_1"></i>
+            <span>首页</span>
+          </a>
+        </li>
+        <li >
+          <a id="index_location" href="../panel_files/myPage.html">
+            <i class="icon_1"></i>
+            <span>个人主页</span>
+          </a>
+        </li>
+
+        <li>
+          <a id="index_location" href="../panel_files/studentList.html">
+            <i class="icon_2"></i>
+            <span>学生列表</span>
+          </a>
+        </li>
+        <li>
+          <a id="index_location" href="../panel_files/course.html">
+            <i class="icon_3"></i>
+            <span>课程管理</span>
+          </a>
+        </li>
+        <li>
+          <a id="index_location" href="../panel_files/work.html">
+            <i class="icon_4"></i>
+            <span>查看作业</span>
+          </a>
+        </li>
+        <li>
+          <a id="index_location" href="#">
+            <i class="icon_5"></i>
+            <span></span>
+          </a>
+        </li>
+        <li>
+          <a id="index_location" href="#">
+            <i class="icon_6"></i>
+            <span></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!--t_header start-->
+  <div class="t_header">
+    <!--h_nav start-->
+    <div class="h_nav">
+      <ul>
+        <li>
+          <a href="#">
+            <i class="h_icon2"></i>
+            <span>平台设置</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="h_icon3"></i>
+            <span>收藏夹</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="h_icon4"></i>
+            <span>内容管理</span>
+          </a>
+        </li>
+        <li>
+          <a href="webLink.html" class="h_sel">
+            <i class="h_icon5"></i>
+            <span>实用网站连接</span>
+          </a>
+        </li>
+        <li>
+          <a href="../chatRoom/chatOnline.html">
+            <i class="h_icon6"></i>
+            <span>聊天室</span>
+          </a>
+        </li>
+        <li>
+          <a href="app.html">
+            <i class="h_icon7"></i>
+            <span>应用中心</span>
+          </a>
+        </li>
+
+        <li class="active">
+          <a href="tool_panel.html">
+            <i class="active"></i>
+            <span>工具</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--end h_nav-->
+
+    <!--h_info start-->
+    <div class="h_info">
+      <div id="userInfo" class="h_user"></div>
+      <div onclick="sign_out()" class="h_out">
+        <a>
+          <span>退出</span>
+          <i></i>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("userInfo").innerHTML = `当前用户: ${localStorage.getItem('userInfo')}`;
+
+      function sign_out() {
+        if(window.confirm("确认退出？")){
+          window.location.href="../../index.html";
+        } else {
+        }
+      }
+    </script>
+    <!--end h_info-->
+
+  </div>
+  <!--end t_header-->
+
+
+  <!--t_right start-->
+  <div class="t_right">
+
+    <!--r_location start-->
+    <div class="r_location">
+      <i></i>
+      <p id="location">当前位置: Chat-Gpt</p>
+    </div>
+    <!--end r_location-->
+
+    <!--r_message start-->
+    <!DOCTYPE html>
+
+
+
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,8 +172,6 @@
         type='text/css' media='all' />
   <link rel='stylesheet' id='wpProQuiz_front_style-css' href='https://c.runoob.com/wp-content/plugins/Wp-Pro-Quiz/css/wpProQuiz_front.min.css?ver=0.37'
         type='text/css' media='all' />
-  <meta name="keywords" content="海拥工具,网址导航,在线工具">
-  <meta name="description" content="海拥工具，为开发设计人员提供在线工具，网址导航，提供在线PHP、Python、 CSS、JS 调试，中文简繁体转换，进制转换等工具。致力于打造国内专业WEB开发工具，集成开发环境，WEB开发教程。..">
   <link rel="shortcut icon" href="https://static.jyshare.com/images/c-runoob-logo.ico">
 
 
@@ -284,7 +445,7 @@
       }
 
       .footer .copyright .copy-text p {
-        margin-bottom: 5px;
+        margin-bottom: 0px;
       }
 
     }
@@ -297,74 +458,9 @@
   <script charset="UTF-8" id="LA_COLLECT" src="https://sdk.51.la/js-sdk-pro.min.js"></script>
   <script>LA.init({id:"JxVJPIpe3UAQqoDx",ck:"JxVJPIpe3UAQqoDx"})</script></head>
 
-<body>
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background: #393D49;">
-  <a class="navbar-brand mr-auto mr-lg-2" href="/">海拥工具</a>
-  <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
 
-      <li class="nav-item">
-        <a target="_blank" class="nav-link" href="https://game.haiyong.site/">游戏合集</a>
-      </li>
-
-      <li class="nav-item">
-        <a target="_blank" class="nav-link" href="cloud-server/index.html">站长工具</a>
-      </li>
-
-      <li class="nav-item">
-        <a target="_blank" class="nav-link" href="https://tools.haiyong.site/ai/index.html">AI 应用</a>
-      </li>
-      <li class="nav-item">
-        <a target="_blank" class="nav-link" href="more/svgeditor/index.html">SVG 在线工具</a>
-      </li>
-      <li class="nav-item">
-        <a target="_blank" class="nav-link" href="search-sites/index.html">搜索引擎</a>
-      </li>
-
-      <li class="nav-item">
-        <a target="_blank" class="nav-link" href="imglibs/index.html">图片&颜色</a>
-      </li>
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-expanded="false">更多频道</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a href="web-developer/index.html" class="dropdown-item" target="_blank">前端开发</a>
-          <a href="media-om/index.html" class="dropdown-item" target="_blank">媒体运营</a>
-          <a href="tech-sites/index.html" class="dropdown-item" target="_blank">科技网站</a>
-          <a href="cloud-server/index.html" class="dropdown-item" target="_blank">云服务器</a>
-          <a href="office/index.html" class="dropdown-item" target="_blank">办公软件</a>
-          <a href="scholar/index.html" class="dropdown-item" target="_blank">学术搜索</a>
-          <a href="ai/index.html" class="dropdown-item" target="_blank">AI 应用</a>
-          <a href="quiz/index.html" class="dropdown-item" target="_blank">在线测验</a>
-          <a href="finance/index.html" class="dropdown-item" target="_blank">财经频道</a>
-          <a href="banks/index.html" class="dropdown-item" target="_blank">银行机构</a>
-          <a href="danwei/index.html" class="dropdown-item" target="_blank">单位换算</a>
-          <a href="sports/index.html" class="dropdown-item" target="_blank">体育频道</a>
-
-        </div>
-      </li>
-      <!--
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-expanded="false">语言</a>
-<div class="dropdown-menu" aria-labelledby="dropdown01">
-<a href="https://enc.runoob.com" class="dropdown-item" target="_blank">English</a>
-</div>
-</li>
--->
-    </ul>
-
-    <form class="form-inline my-2 my-lg-0" action="" method="get">
-      <input class="form-control mr-sm-2" name="s" value="" type="text" id="searchInput" placeholder="建议用ctrl+f" aria-label="Search">
-      <button class="btn btn-warning my-2 my-sm-0" type="submit" id="searchButton">搜索</button>
-    </form>
-
-  </div>
-</nav>
 <script>
   var is_home = false;
 </script>

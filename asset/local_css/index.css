@@ -1,0 +1,11 @@
+.night {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial';
+}
+
+.day {
+    background-color: #fff;
+    color: #000;
+    font-family: 'Arial'
+}
